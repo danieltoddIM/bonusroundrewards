@@ -1,0 +1,18 @@
+{
+  "scrabbleEpisodes": 50,
+  "triviaEpisodes": 50,
+  "scrabbleViewers": 422000,
+  "triviaViewers": 505000,
+  "scanRate": 0.5,
+  "conversion": 10,
+  "posts": 52,
+  "reachRate": 3,
+  "ctr": 1,
+  "store": 20,
+  "overlap": 10,
+  "engaged": 45,
+  "churn": 15,
+  "gross": 5.5,
+  "low": 2,
+  "high": 2.25
+}
