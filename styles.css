@@ -182,6 +182,68 @@ a { color: inherit; text-decoration: none; }
 .hero-stat-ticket span { display: block; color: var(--ink-soft); font-size: 0.68rem; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; }
 .hero-stat-ticket strong { display: block; margin-top: 4px; color: var(--primary); font-size: 1.7rem; line-height: 1; font-weight: 950; }
 
+/* ---------- Shared: section heading (kicker-style intro + copy) ---------- */
+.section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.8fr);
+  gap: 36px;
+  align-items: end;
+}
+.section-heading h2 { font-size: 1.7rem; line-height: 1.25; margin: 0; }
+.section-heading p { color: var(--ink-soft); line-height: 1.6; margin: 0; }
+
+/* ---------- 05 Daily engagement loop ---------- */
+.loop-section { background: var(--navy); color: var(--white); }
+.loop-section .section-kicker { color: var(--accent); }
+.loop-section .section-heading h2 { color: var(--white); }
+.loop-section .section-heading p { color: rgba(255,255,255,0.72); }
+
+.loop-track {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.16);
+  border-bottom: 1px solid rgba(255,255,255,0.16);
+}
+.loop-track article {
+  flex: 1 1 0;
+  min-width: 140px;
+  padding: 28px 14px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.14);
+}
+.loop-track article:last-child { border-right: 0; }
+.loop-step-num {
+  display: block;
+  color: var(--accent);
+  font-weight: 950;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+.loop-shot {
+  width: 56px; height: 84px; object-fit: cover; object-position: top center;
+  border-radius: 8px; margin: 0 auto 14px; display: block;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.4);
+}
+.loop-icon {
+  width: 56px; height: 56px; margin: 0 auto 14px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2);
+}
+.loop-icon svg { width: 26px; height: 26px; stroke: var(--accent); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.loop-track strong { display: block; font-size: 0.9rem; margin-bottom: 6px; color: var(--white); }
+.loop-track p { margin: 0; font-size: 0.78rem; color: rgba(255,255,255,0.6); line-height: 1.4; }
+
+@media (max-width: 900px) {
+  .loop-track article { flex: 1 1 33%; border-bottom: 1px solid rgba(255,255,255,0.14); }
+}
+@media (max-width: 600px) {
+  .loop-track { flex-direction: column; }
+  .loop-track article { border-right: 0; }
+  .loop-track article:last-child { border-bottom: 0; }
+}
+
 /* ---------- 01 Audience fit ---------- */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
 .split h2 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 14px; }
