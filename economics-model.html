@@ -1,1 +1,266 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#102e50"><title>Economics Model | Bonus Round</title><meta name="description" content="Discover new games. Earn rewards. A shared rewards app for game-show audiences, powered by Influence Mobile."><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="bonus-brand" href="index.html">BONUS R<span>O</span>UND<small>POWERED BY INFLUENCE MOBILE</small></a><nav class="site-nav" aria-label="Main navigation"><a href="index.html">Overview</a><a href="install-model.html">Install model</a><a href="economics-model.html">Economics model</a></nav><span class="privacy-chip">Partnership proposal</span></header><main id="main" data-model-page="economics"><section class="section model-section"><div class="section-kicker">Interactive scenario model</div><h1 class="model-title">Economics Model</h1><p class="scenario-note">Explore partner revenue from the combined TV and CW social acquisition scenario. Adjust engagement, retention and revenue assumptions below.</p><noscript><p>Enable JavaScript to calculate this model.</p></noscript><p id="model-message" role="status"></p><p id="acquisition-context"></p><a href="install-model.html">Adjust acquisition assumptions →</a><div class="br-kpis"><article><span>Year 1 partner share</span><strong id="y1-share">—</strong></article><article><span>Year 2 partner share</span><strong id="y2-share">—</strong></article><article><span>Month 24 active players</span><strong id="m24">—</strong></article></div><p class="model-note">Combined partner share, before allocation between shows or agency. Minimum-guarantee payments and offsets are not modeled.</p><h2 class="model-subtitle">Growth and revenue inputs</h2><div class="model-card economics-controls"><div class="model-field"><div class="model-field-top"><label for="engaged">Engaged-install rate (%)</label><output class="mf-val tabular" id="engagedVal" for="engaged">45%</output></div><input id="engaged" data-input="engaged" data-unit="%" type="range" min="0.0" max="100.0" step="1.0" value="45"><p class="model-note"></p></div><div class="model-field"><div class="model-field-top"><label for="churn">Monthly churn (%)</label><output class="mf-val tabular" id="churnVal" for="churn">15%</output></div><input id="churn" data-input="churn" data-unit="%" type="range" min="0.0" max="100.0" step="1.0" value="15"><p class="model-note"></p></div><div class="model-field"><div class="model-field-top"><label for="gross">Gross revenue / active player / month ($)</label><output class="mf-val tabular" id="grossVal" for="gross">5.5$</output></div><input id="gross" data-input="gross" data-unit="$" type="range" min="0.0" max="15.0" step="0.25" value="5.5"><p class="model-note"></p></div><div class="model-field"><div class="model-field-top"><label for="low">Partner share / active player / month — low ($)</label><output class="mf-val tabular" id="lowVal" for="low">2$</output></div><input id="low" data-input="low" data-unit="$" type="range" min="0.0" max="15.0" step="0.05" value="2"><p class="model-note"></p></div><div class="model-field"><div class="model-field-top"><label for="high">Partner share / active player / month — high ($)</label><output class="mf-val tabular" id="highVal" for="high">2.25$</output></div><input id="high" data-input="high" data-unit="$" type="range" min="0.0" max="15.0" step="0.05" value="2.25"><p class="model-note"></p></div></div><div class="br-actions"><button id="reset-model">Reset growth assumptions</button><button id="export-model">Download monthly results (CSV)</button></div><div class="br-chart"><h2 class="model-subtitle">Monthly active players</h2><svg id="mau-chart" viewBox="0 0 800 270" role="img" aria-label="24-month active-player projection"></svg><div class="model-mau-axis"><span>Month 1</span><span>Month 12</span><span>Month 24</span></div></div><div class="br-kpis secondary"><article><span>Year 2 gross platform revenue</span><strong id="y2-gross">—</strong></article><article><span>Month 24 annualized partner share</span><strong id="run-rate">—</strong></article><article><span>Steady-state active players</span><strong id="steady">—</strong></article></div><details class="model-method"><summary>View all 24 months</summary><div class="br-table-wrap"><table><thead><tr><th>Month</th><th>Active players</th><th>Gross revenue</th><th>Partner share</th></tr></thead><tbody id="monthly-results"></tbody></table></div></details><details class="model-method"><summary>Assumptions and methodology</summary><p>Starts with zero active players. Net annual installs are spread evenly over 12 months and repeated in year 2. Monthly new engaged players = annual installs ÷ 12 × engagement rate. Each month’s active base = previous base × (1 − churn) + new engaged players.</p><p>Revenue uses each month’s active base. Year 2 totals sum months 13–24. The month-24 run rate multiplies that month by 12. Steady state = monthly new engaged players ÷ churn; with positive inflow and zero churn there is no finite steady state.</p><p>The $5.50 gross rate and $2.00–$2.25 partner-share range are Influence Mobile planning inputs. Reward and operating costs are not separately modeled. These estimates are not forecasts or guarantees. The 200,000-player illustration on the overview is a separate scale scenario.</p></details></section></main><footer class="site-footer"><strong>Bonus Round</strong><p>bonusroundrewards.com · Powered by Influence Mobile</p><p>Partnership proposal. Product screens and offers are illustrative; final terms and brand permissions are subject to agreement.</p></footer><script src="model.js" defer></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Economics Model — Bonus Round</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#102e50">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+<a class="brand-lockup" href="/">BONUS R<span>O</span>UND<small>POWERED BY INFLUENCE MOBILE</small></a>
+<nav class="site-nav" aria-label="Model pages">
+<a href="/economics-model" class="active">Economics Model</a>
+<a href="/install-model">Install Model</a>
+</nav>
+<span class="privacy-chip">Internal planning tool</span>
+</header>
+
+<main id="main">
+<section class="section model-section" id="economics-model">
+  <div class="section-kicker">Live model</div>
+  <div class="section-heading">
+    <h2>Economics Model</h2>
+    <p>
+      Partner revenue from the combined TV and CW social acquisition
+      scenario. Adjust the engaged-install rate and monthly churn below —
+      the Install Model page feeds the installs this runs on. Partner share
+      per active player is Influence Mobile's standard rate, not a term the
+      partner sets, so it's fixed rather than a slider here.
+    </p>
+  </div>
+
+  <div class="model-revenue-hero">
+    <div class="mrh-label">Revenue Projection</div>
+    <div class="mrh-figures">
+      <div class="mrh-figure">
+        <div class="mrh-value tabular" id="gAvgRevHero">$0</div>
+        <div class="mrh-sub">Avg. Monthly Gross Revenue</div>
+      </div>
+      <div class="mrh-figure">
+        <div class="mrh-value tabular" id="gYear2Gross">$0</div>
+        <div class="mrh-sub">Year-2 Gross Revenue</div>
+      </div>
+      <div class="mrh-figure">
+        <div class="mrh-value is-share tabular" id="gYear2Share">$0</div>
+        <div class="mrh-sub">Year-2 Partner Share</div>
+      </div>
+    </div>
+    <div class="mrh-note">
+      At $<span id="grossRateNote">5.50</span> gross revenue and $<span id="shareRangeNote">2.00&ndash;2.25</span>
+      partner share per active player per month, averaging
+      <b class="tabular" id="gAvgMau">0</b> active players across the
+      24-month run below.
+      <span id="syncNote"></span>
+    </div>
+  </div>
+
+  <div class="model-card">
+    <h3>Monthly Active Players</h3>
+    <div class="model-mau-chart" id="mauChart"></div>
+    <div class="model-mau-axis"><span>Month 1</span><span>Month 12</span><span>Month 24</span></div>
+
+    <div class="model-stat-strip">
+      <div class="model-stat is-modeled">
+        <span>New Engaged Players / Mo.</span>
+        <strong class="tabular" id="gNewEngaged">0</strong>
+      </div>
+      <div class="model-stat is-baseline">
+        <span>Month 12 Active Players</span>
+        <strong class="tabular" id="gMau12">0</strong>
+      </div>
+      <div class="model-stat is-baseline">
+        <span>Month 24 Active Players</span>
+        <strong class="tabular" id="gMau24">0</strong>
+      </div>
+      <div class="model-stat is-modeled">
+        <span>Steady-State Active Players</span>
+        <strong class="tabular" id="gSteadyMau">0</strong>
+      </div>
+    </div>
+
+    <div class="model-foot-note">
+      Model: each month, (net annual installs from the Install Model page
+      &divide; 12) &times; engaged-install rate = new engaged players added to
+      the base; the existing base loses the churn rate each month before
+      that addition. Steady-State is where the base would flatten out if
+      inflow and churn both held constant indefinitely (new engaged
+      players &divide; churn rate). Year-2 figures sum months 13&ndash;24.
+      Minimum guarantees and allocation between shows or the agency are not
+      modeled.
+    </div>
+  </div>
+
+  <div class="model-card">
+    <h3>Growth Inputs</h3>
+    <div class="model-field">
+      <div class="model-field-top">
+        <label for="engageRate">Engaged-install rate</label>
+        <span class="mf-val tabular" id="engageRateVal">50%</span>
+      </div>
+      <input type="range" id="engageRate" min="0" max="100" step="1" value="50">
+      <div class="model-note">
+        Share of net annual installs (Install Model page) that turn into a
+        real, engaged player. Documented baseline: 45%.
+      </div>
+    </div>
+    <div class="model-field model-lift-field">
+      <div class="model-field-top">
+        <label for="monthlyChurn">Monthly churn</label>
+        <span class="mf-val lift tabular" id="monthlyChurnVal">14%</span>
+      </div>
+      <input type="range" id="monthlyChurn" min="0" max="100" step="1" value="14">
+      <div class="model-note">
+        Share of active engaged players lost each month. Lower churn means
+        the active-player base builds toward a higher steady state.
+        Documented baseline: 15%.
+      </div>
+    </div>
+  </div>
+
+  <div class="model-card">
+    <h3>Revenue Input</h3>
+    <div class="model-field">
+      <div class="model-field-top">
+        <label for="gross">Gross revenue / active player / month</label>
+        <span class="mf-val tabular" id="grossVal">$5.50</span>
+      </div>
+      <input type="range" id="gross" min="0" max="15" step="0.25" value="5.5">
+      <div class="model-note">Influence Mobile's standard per-player rate across the white-label model.</div>
+    </div>
+    <div class="model-field" style="margin-bottom:0;">
+      <div class="model-field-top">
+        <label>Partner share / active player / month</label>
+        <span class="mf-val tabular">$2.05&ndash;$2.30</span>
+      </div>
+      <div class="model-note">
+        Influence Mobile's fixed white-label revenue-share rate — not a
+        term the partner sets, so it isn't a slider here.
+      </div>
+    </div>
+    <div class="model-note" id="shareWarning" style="color: var(--red); display:none; margin-top:14px;">
+      Check the gross revenue input — it's currently below the fixed partner-share rate above.
+    </div>
+  </div>
+</section>
+</main>
+
+<script>
+  const MONTHS = 24;
+  const DEFAULT_NET_INSTALLS = 135332.226; // Install Model page's own default-scenario output
+  const LOCAL_STORAGE_KEY = 'bonusRoundCombinedInstalls'; // must match install-model.html
+  // Partner share is Influence Mobile's fixed white-label rate — not a term
+  // the partner sets, so these are constants rather than slider inputs.
+  const SHARE_LOW = 2.05;
+  const SHARE_HIGH = 2.30;
+
+  function fmt(n){ return Math.round(n).toLocaleString('en-US'); }
+  // Abbreviates to $NK / $N.NNM so a hero figure's box never has to hold a
+  // full digit string — the fix for the "range runs outside the box" bug,
+  // and it stays correct no matter how high the sliders push the numbers.
+  function money(n){
+    const sign = n < 0 ? '-' : '';
+    const abs = Math.abs(n);
+    if (abs >= 1000000) return sign + '$' + (abs/1000000).toFixed(2) + 'M';
+    if (abs >= 1000) return sign + '$' + Math.round(abs/1000) + 'K';
+    return sign + '$' + Math.round(abs);
+  }
+
+  const els = {
+    engageRate: document.getElementById('engageRate'),
+    monthlyChurn: document.getElementById('monthlyChurn'),
+    gross: document.getElementById('gross'),
+  };
+  const out = {
+    engageRateVal: document.getElementById('engageRateVal'),
+    monthlyChurnVal: document.getElementById('monthlyChurnVal'),
+    grossVal: document.getElementById('grossVal'),
+    grossRateNote: document.getElementById('grossRateNote'),
+    shareRangeNote: document.getElementById('shareRangeNote'),
+    gNewEngaged: document.getElementById('gNewEngaged'),
+    gAvgMau: document.getElementById('gAvgMau'),
+    gAvgRevHero: document.getElementById('gAvgRevHero'),
+    gYear2Gross: document.getElementById('gYear2Gross'),
+    gYear2Share: document.getElementById('gYear2Share'),
+    gMau12: document.getElementById('gMau12'),
+    gMau24: document.getElementById('gMau24'),
+    gSteadyMau: document.getElementById('gSteadyMau'),
+    mauChart: document.getElementById('mauChart'),
+    syncNote: document.getElementById('syncNote'),
+    shareWarning: document.getElementById('shareWarning'),
+  };
+
+  let netInstalls = DEFAULT_NET_INSTALLS;
+  let synced = false;
+  try {
+    const saved = window.localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (saved) {
+      const n = parseFloat(saved);
+      if (!Number.isNaN(n) && n > 0) { netInstalls = n; synced = true; }
+    }
+  } catch (e) {
+    // localStorage unavailable — keep the default scenario.
+  }
+
+  function recalc(){
+    const engageRate = parseFloat(els.engageRate.value) / 100;
+    const monthlyChurn = parseFloat(els.monthlyChurn.value) / 100;
+    const gross = parseFloat(els.gross.value);
+    const shareLow = SHARE_LOW;
+    const shareHigh = SHARE_HIGH;
+
+    out.engageRateVal.textContent = (engageRate*100).toFixed(0) + '%';
+    out.monthlyChurnVal.textContent = (monthlyChurn*100).toFixed(0) + '%';
+    out.grossVal.textContent = '$' + gross.toFixed(2);
+    out.grossRateNote.textContent = gross.toFixed(2);
+    out.shareRangeNote.textContent = shareLow.toFixed(2) + '–' + shareHigh.toFixed(2);
+
+    out.shareWarning.style.display = (shareHigh > gross) ? 'block' : 'none';
+
+    const monthlyNewInstalls = netInstalls / 12;
+    const monthlyNewEngaged = monthlyNewInstalls * engageRate;
+    out.gNewEngaged.textContent = fmt(monthlyNewEngaged);
+
+    const mauSeries = [];
+    let mau = 0;
+    for(let m=0; m<MONTHS; m++){
+      mau = mau * (1 - monthlyChurn) + monthlyNewEngaged;
+      mauSeries.push(mau);
+    }
+    const avgMau = mauSeries.reduce((s,v) => s+v, 0) / mauSeries.length;
+    const mau12 = mauSeries[11];
+    const mau24 = mauSeries[23];
+    const steadyMau = monthlyChurn > 0 ? (monthlyNewEngaged / monthlyChurn) : mau24;
+    const avgMonthlyRev = avgMau * gross;
+    const year2Gross = mauSeries.slice(12, 24).reduce((s,v) => s+v, 0) * gross;
+    const year2ShareLow = mauSeries.slice(12, 24).reduce((s,v) => s+v, 0) * shareLow;
+    const year2ShareHigh = mauSeries.slice(12, 24).reduce((s,v) => s+v, 0) * shareHigh;
+
+    out.gAvgMau.textContent = fmt(avgMau);
+    out.gAvgRevHero.textContent = money(avgMonthlyRev);
+    out.gYear2Gross.textContent = money(year2Gross);
+    out.gYear2Share.textContent = money(year2ShareLow) + '–' + money(year2ShareHigh);
+    out.gMau12.textContent = fmt(mau12);
+    out.gMau24.textContent = fmt(mau24);
+    out.gSteadyMau.textContent = fmt(steadyMau);
+
+    const maxMau = Math.max(...mauSeries, 1);
+    out.mauChart.innerHTML = mauSeries.map((v, i) =>
+      `<div class="model-mau-bar${i>=12?' engaged-phase':''}" style="height:${Math.max(2,(v/maxMau)*100)}%" title="Month ${i+1}: ${fmt(v)} active players"></div>`
+    ).join('');
+
+    out.syncNote.textContent = synced
+      ? ` Net annual installs (${fmt(netInstalls)}) are synced from the Install Model page — the last scenario you viewed in this browser.`
+      : ` Using the Install Model page's default scenario (${fmt(netInstalls)} net annual installs) — open that page first in this browser to feed in your own numbers.`;
+  }
+
+  Object.values(els).forEach(el => el.addEventListener('input', recalc));
+  recalc();
+</script>
+</body>
+</html>
