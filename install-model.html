@@ -31,10 +31,10 @@
       promotion during Scrabble and Trivial Pursuit, and weekly CW social
       promotion — built on the audience figures BGE supplied. Response
       and conversion rates are adjustable planning assumptions. The sliders
-      below load at a modestly optimistic scan- and click-through case —
-      each about 10% above the documented baseline rate — with the exact
-      lift shown next to each result; drag any slider back to the
-      documented baseline to see the conservative case.
+      below load at the current planning case for each rate, with the lift
+      versus the documented baseline shown next to each result; drag any
+      slider back to the baseline noted in its field to see the more
+      conservative scenario.
     </p>
   </div>
 
@@ -80,14 +80,14 @@
       <div class="model-card">
         <h3>Viewer Response</h3>
         <div class="model-field">
-          <div class="model-field-top"><label for="scanRate">Viewer exposure &rarr; QR scan</label><span class="mf-val tabular" id="scanRateVal">0.55%</span></div>
-          <input type="range" id="scanRate" min="0" max="5" step="0.05" value="0.55">
-          <div class="model-note">Assumed response per viewing exposure; repeat viewers and repeat scans may occur.</div>
+          <div class="model-field-top"><label for="scanRate">Viewer exposure &rarr; QR scan</label><span class="mf-val tabular" id="scanRateVal">1%</span></div>
+          <input type="range" id="scanRate" min="0" max="5" step="0.05" value="1">
+          <div class="model-note">Assumed response per viewing exposure; repeat viewers and repeat scans may occur. Documented baseline: 0.5%.</div>
         </div>
         <div class="model-field">
-          <div class="model-field-top"><label for="conversion">QR scan &rarr; install</label><span class="mf-val tabular" id="conversionVal">10%</span></div>
-          <input type="range" id="conversion" min="0" max="100" step="0.5" value="10">
-          <div class="model-note">Planning assumption; not a measured conversion rate for either show.</div>
+          <div class="model-field-top"><label for="conversion">QR scan &rarr; install</label><span class="mf-val tabular" id="conversionVal">20%</span></div>
+          <input type="range" id="conversion" min="0" max="100" step="0.5" value="20">
+          <div class="model-note">Planning assumption; not a measured conversion rate for either show. Documented baseline: 10%.</div>
         </div>
       </div>
     </div>
@@ -133,14 +133,14 @@
           <button class="preset-btn" type="button" data-posts="104">One per show each week</button>
         </div>
         <div class="model-field" style="margin-top:22px;">
-          <div class="model-field-top"><label for="reachRate">Average reach per account / promotion</label><span class="mf-val tabular" id="reachRateVal">3%</span></div>
-          <input type="range" id="reachRate" min="0" max="100" step="0.5" value="3">
-          <div class="model-note">Assumed percentage of followers reached on each platform. Follower totals are not guaranteed post reach; adjust for the agreed channel mix.</div>
+          <div class="model-field-top"><label for="reachRate">Average reach per account / promotion</label><span class="mf-val tabular" id="reachRateVal">3.5%</span></div>
+          <input type="range" id="reachRate" min="0" max="100" step="0.5" value="3.5">
+          <div class="model-note">Assumed percentage of followers reached on each platform. Follower totals are not guaranteed post reach; adjust for the agreed channel mix. Documented baseline: 3%.</div>
         </div>
         <div class="model-field">
-          <div class="model-field-top"><label for="ctr">Reached audience &rarr; link click</label><span class="mf-val tabular" id="ctrVal">1.1%</span></div>
-          <input type="range" id="ctr" min="0" max="100" step="0.1" value="1.1">
-          <div class="model-note">Organic social click-through benchmark.</div>
+          <div class="model-field-top"><label for="ctr">Reached audience &rarr; link click</label><span class="mf-val tabular" id="ctrVal">1.5%</span></div>
+          <input type="range" id="ctr" min="0" max="100" step="0.1" value="1.5">
+          <div class="model-note">Organic social click-through benchmark. Documented baseline: 1%.</div>
         </div>
         <div class="model-field">
           <div class="model-field-top"><label for="store">App-store visit &rarr; install</label><span class="mf-val tabular" id="storeVal">20%</span></div>
@@ -192,22 +192,8 @@
     </div>
   </div>
 
-  <div class="model-integration-card">
-    <div class="mic-top">
-      <h3>Combined Audience Adjustment</h3>
-      <span class="mic-val tabular" id="overlapVal">10%</span>
-    </div>
-    <p>
-      Applied to total QR and social installs to allow for repeat viewers,
-      overlapping accounts, and overlap between the two shows' audiences.
-      This estimate does not establish measured unique reach.
-    </p>
-    <input type="range" id="overlap" min="0" max="100" step="1" value="10">
-    <div class="mic-note">
-      At <b id="overlapNote">10%</b> duplicate installs excluded, the combined
-      QR and social installs above are reduced by that share to reach the
-      net annual installs figure at the top of this page.
-    </div>
+  <div class="model-foot-note" style="margin-top:34px;">
+    Modeled Net Annual Installs above is the sum of QR and social installs.
   </div>
 </section>
 </main>
@@ -223,7 +209,6 @@
     triviaEpisodes: 50, triviaViewers: 505000,
     scanRate: 0.5, conversion: 10,
     posts: 52, reachRate: 3, ctr: 1, store: 20,
-    overlap: 10,
   };
 
   function fmt(n){ return Math.round(n).toLocaleString('en-US'); }
@@ -242,8 +227,6 @@
     reachRateVal: document.getElementById('reachRateVal'),
     ctrVal: document.getElementById('ctrVal'),
     storeVal: document.getElementById('storeVal'),
-    overlapVal: document.getElementById('overlapVal'),
-    overlapNote: document.getElementById('overlapNote'),
     qrInstalls: document.getElementById('qrInstalls'),
     qrDelta: document.getElementById('qrDelta'),
     viewerExposures: document.getElementById('viewerExposures'),
@@ -275,7 +258,7 @@
     const qr = scans * v.conversion/100;
     const reach = CW_TOTAL_FOLLOWERS * v.reachRate/100;
     const social = v.posts * reach * v.ctr/100 * v.store/100;
-    const net = (qr+social) * (1 - v.overlap/100);
+    const net = qr + social;
     return { viewers, scans, qr, reach, social, net };
   }
 
@@ -293,8 +276,6 @@
     out.reachRateVal.textContent = values.reachRate.toFixed(1) + '%';
     out.ctrVal.textContent = values.ctr.toFixed(1) + '%';
     out.storeVal.textContent = fmt(values.store) + '%';
-    out.overlapVal.textContent = fmt(values.overlap) + '%';
-    out.overlapNote.textContent = fmt(values.overlap) + '%';
 
     const base = acquisition(DEFAULTS);
     const mod = acquisition(values);

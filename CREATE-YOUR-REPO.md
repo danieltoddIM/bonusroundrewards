@@ -67,19 +67,24 @@ never needs it.
 - **Response assumptions** (adjustable in the Install Model): the
   documented baseline is 0.5% viewer-to-scan, 10% scan-to-install, 52
   promotional waves/year, 3% reach/account/wave, 1% click-through, 20%
-  store conversion, with 10% of combined installs excluded as likely
-  duplicates — that baseline nets to about 42,783 annual installs. Both
-  model pages load with a modestly optimistic case instead (0.55%
-  viewer-to-scan, 1.1% click-through, everything else at baseline), which
-  nets to about 47,061 annual installs (+10%); each slider's delta vs. the
-  documented baseline is shown live on the page.
+  store conversion — that baseline nets to about 47,536 annual installs.
+  Both model pages load with a higher current planning case instead (1%
+  viewer-to-scan, 20% scan-to-install, 3.5% reach/account/wave, 1.5%
+  click-through), which nets to about 135,332 annual installs (+185%);
+  each slider's delta vs. the documented baseline is shown live on the
+  page. There is no duplicate-audience discount applied — a prior version
+  had a 10% haircut for overlap between the two audiences; that's been
+  removed, so Net Annual Installs is now the unadjusted sum of the two
+  channels.
 - **Economics assumptions** (adjustable in the Economics Model): documented
-  baseline is 45% engaged-install rate, 15% monthly churn, $5.50 gross
-  revenue and $2.00–$2.25 partner share per active player per month. The
-  page loads with a modestly optimistic case instead (46% engaged-install
-  rate, 14% monthly churn, $2.05–$2.30 partner share), which combined with
-  the modest install lift above puts steady-state active players at about
-  12,900 and modeled annual partner share at $317K–$356K.
+  baseline is 45% engaged-install rate and 15% monthly churn. The page
+  loads with a higher current planning case instead (50% engaged-install
+  rate, 14% monthly churn), which combined with the install case above puts
+  steady-state active players at about 40,300 and modeled annual partner
+  share at $991K–$1.11M. Partner share ($2.05–$2.30 per active player per
+  month, off a $5.50 gross-revenue rate) is Influence Mobile's fixed
+  white-label rate — not something the partner can adjust — so it's shown
+  as a fixed figure rather than a slider.
 - **Company proof points**: $250M+ lifetime revenue, $50M+ rewards paid to
   players — supplied by Influence Mobile.
 

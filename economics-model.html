@@ -28,12 +28,10 @@
     <h2>Economics Model</h2>
     <p>
       Partner revenue from the combined TV and CW social acquisition
-      scenario. Adjust engagement, retention, and revenue-share assumptions
-      below — the Install Model page feeds the installs this runs on. The
-      inputs load at a modestly optimistic case — a slightly higher
-      engaged-install rate, slightly lower churn, and a slightly wider
-      partner-share range than the documented baseline — with each input's
-      note showing the conservative alternative.
+      scenario. Adjust the engaged-install rate and monthly churn below —
+      the Install Model page feeds the installs this runs on. Partner share
+      per active player is Influence Mobile's standard rate, not a term the
+      partner sets, so it's fixed rather than a slider here.
     </p>
   </div>
 
@@ -103,9 +101,9 @@
     <div class="model-field">
       <div class="model-field-top">
         <label for="engageRate">Engaged-install rate</label>
-        <span class="mf-val tabular" id="engageRateVal">46%</span>
+        <span class="mf-val tabular" id="engageRateVal">50%</span>
       </div>
-      <input type="range" id="engageRate" min="0" max="100" step="1" value="46">
+      <input type="range" id="engageRate" min="0" max="100" step="1" value="50">
       <div class="model-note">
         Share of net annual installs (Install Model page) that turn into a
         real, engaged player. Documented baseline: 45%.
@@ -126,7 +124,7 @@
   </div>
 
   <div class="model-card">
-    <h3>Revenue &amp; Partner Share Inputs</h3>
+    <h3>Revenue Input</h3>
     <div class="model-field">
       <div class="model-field-top">
         <label for="gross">Gross revenue / active player / month</label>
@@ -135,24 +133,18 @@
       <input type="range" id="gross" min="0" max="15" step="0.25" value="5.5">
       <div class="model-note">Influence Mobile's standard per-player rate across the white-label model.</div>
     </div>
-    <div class="model-field">
+    <div class="model-field" style="margin-bottom:0;">
       <div class="model-field-top">
-        <label for="shareLow">Partner share / active player / month &mdash; low</label>
-        <span class="mf-val tabular" id="shareLowVal">$2.05</span>
+        <label>Partner share / active player / month</label>
+        <span class="mf-val tabular">$2.05&ndash;$2.30</span>
       </div>
-      <input type="range" id="shareLow" min="0" max="15" step="0.05" value="2.05">
-      <div class="model-note">Documented baseline: $2.00.</div>
-    </div>
-    <div class="model-field">
-      <div class="model-field-top">
-        <label for="shareHigh">Partner share / active player / month &mdash; high</label>
-        <span class="mf-val tabular" id="shareHighVal">$2.30</span>
+      <div class="model-note">
+        Influence Mobile's fixed white-label revenue-share rate — not a
+        term the partner sets, so it isn't a slider here.
       </div>
-      <input type="range" id="shareHigh" min="0" max="15" step="0.05" value="2.3">
-      <div class="model-note">Documented baseline: $2.25.</div>
     </div>
-    <div class="model-note" id="shareWarning" style="color: var(--red); display:none;">
-      Check the inputs — partner share should be ordered low to high and shouldn't exceed gross revenue.
+    <div class="model-note" id="shareWarning" style="color: var(--red); display:none; margin-top:14px;">
+      Check the gross revenue input — it's currently below the fixed partner-share rate above.
     </div>
   </div>
 </section>
@@ -160,25 +152,34 @@
 
 <script>
   const MONTHS = 24;
-  const DEFAULT_NET_INSTALLS = 47060.90928; // Install Model page's own default-scenario output
+  const DEFAULT_NET_INSTALLS = 135332.226; // Install Model page's own default-scenario output
   const LOCAL_STORAGE_KEY = 'bonusRoundCombinedInstalls'; // must match install-model.html
+  // Partner share is Influence Mobile's fixed white-label rate — not a term
+  // the partner sets, so these are constants rather than slider inputs.
+  const SHARE_LOW = 2.05;
+  const SHARE_HIGH = 2.30;
 
   function fmt(n){ return Math.round(n).toLocaleString('en-US'); }
-  function money(n){ return '$' + fmt(n); }
+  // Abbreviates to $NK / $N.NNM so a hero figure's box never has to hold a
+  // full digit string — the fix for the "range runs outside the box" bug,
+  // and it stays correct no matter how high the sliders push the numbers.
+  function money(n){
+    const sign = n < 0 ? '-' : '';
+    const abs = Math.abs(n);
+    if (abs >= 1000000) return sign + '$' + (abs/1000000).toFixed(2) + 'M';
+    if (abs >= 1000) return sign + '$' + Math.round(abs/1000) + 'K';
+    return sign + '$' + Math.round(abs);
+  }
 
   const els = {
     engageRate: document.getElementById('engageRate'),
     monthlyChurn: document.getElementById('monthlyChurn'),
     gross: document.getElementById('gross'),
-    shareLow: document.getElementById('shareLow'),
-    shareHigh: document.getElementById('shareHigh'),
   };
   const out = {
     engageRateVal: document.getElementById('engageRateVal'),
     monthlyChurnVal: document.getElementById('monthlyChurnVal'),
     grossVal: document.getElementById('grossVal'),
-    shareLowVal: document.getElementById('shareLowVal'),
-    shareHighVal: document.getElementById('shareHighVal'),
     grossRateNote: document.getElementById('grossRateNote'),
     shareRangeNote: document.getElementById('shareRangeNote'),
     gNewEngaged: document.getElementById('gNewEngaged'),
@@ -210,18 +211,16 @@
     const engageRate = parseFloat(els.engageRate.value) / 100;
     const monthlyChurn = parseFloat(els.monthlyChurn.value) / 100;
     const gross = parseFloat(els.gross.value);
-    const shareLow = parseFloat(els.shareLow.value);
-    const shareHigh = parseFloat(els.shareHigh.value);
+    const shareLow = SHARE_LOW;
+    const shareHigh = SHARE_HIGH;
 
     out.engageRateVal.textContent = (engageRate*100).toFixed(0) + '%';
     out.monthlyChurnVal.textContent = (monthlyChurn*100).toFixed(0) + '%';
     out.grossVal.textContent = '$' + gross.toFixed(2);
-    out.shareLowVal.textContent = '$' + shareLow.toFixed(2);
-    out.shareHighVal.textContent = '$' + shareHigh.toFixed(2);
     out.grossRateNote.textContent = gross.toFixed(2);
     out.shareRangeNote.textContent = shareLow.toFixed(2) + '–' + shareHigh.toFixed(2);
 
-    out.shareWarning.style.display = (shareLow > shareHigh || shareHigh > gross) ? 'block' : 'none';
+    out.shareWarning.style.display = (shareHigh > gross) ? 'block' : 'none';
 
     const monthlyNewInstalls = netInstalls / 12;
     const monthlyNewEngaged = monthlyNewInstalls * engageRate;
