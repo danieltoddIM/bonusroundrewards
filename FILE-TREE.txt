@@ -1,0 +1,99 @@
+bonus-round/
+├── config/
+│   └── site.json
+├── content/
+│   ├── legal/
+│   │   ├── account-deletion.html
+│   │   ├── do-not-sell.html
+│   │   ├── privacy-policy.html
+│   │   ├── research-notes.json
+│   │   ├── rewards-rules.html
+│   │   └── terms.html
+│   └── public/
+│       ├── 404.html
+│       ├── about.html
+│       ├── cookies.html
+│       ├── download.html
+│       ├── faq.html
+│       ├── home.html
+│       ├── how-it-works.html
+│       └── support.html
+├── scripts/
+│   ├── brand-assets.py
+│   ├── build.mjs
+│   ├── check.mjs
+│   └── serve.mjs
+├── site/
+│   ├── about/
+│   │   └── index.html
+│   ├── account-deletion/
+│   │   └── index.html
+│   ├── assets/
+│   │   ├── app/
+│   │   │   ├── bonus-unlocked.webp
+│   │   │   ├── daily-bonus.webp
+│   │   │   ├── discover.webp
+│   │   │   ├── my-games.webp
+│   │   │   └── rewards.webp
+│   │   ├── brand/
+│   │   │   ├── apple-touch-icon.png
+│   │   │   ├── favicon-32.png
+│   │   │   ├── favicon.svg
+│   │   │   ├── icon-192.png
+│   │   │   ├── icon-512.png
+│   │   │   └── social-card.png
+│   │   ├── css/
+│   │   │   └── site.css
+│   │   ├── fonts/
+│   │   │   ├── OFL-Manrope.txt
+│   │   │   └── manrope-latin.woff2
+│   │   └── js/
+│   │       └── site.js
+│   ├── cookies/
+│   │   └── index.html
+│   ├── do-not-sell/
+│   │   └── index.html
+│   ├── download/
+│   │   └── index.html
+│   ├── faq/
+│   │   └── index.html
+│   ├── how-it-works/
+│   │   └── index.html
+│   ├── partners/
+│   │   ├── assets/
+│   │   │   ├── bonus-unlocked.webp
+│   │   │   ├── daily-bonus.webp
+│   │   │   ├── discover.webp
+│   │   │   ├── favicon.svg
+│   │   │   ├── my-games.webp
+│   │   │   └── rewards.webp
+│   │   ├── economics-model/
+│   │   │   └── index.html
+│   │   ├── install-model/
+│   │   │   └── index.html
+│   │   ├── index.html
+│   │   └── styles.css
+│   ├── privacy-policy/
+│   │   └── index.html
+│   ├── rewards-rules/
+│   │   └── index.html
+│   ├── support/
+│   │   └── index.html
+│   ├── terms/
+│   │   └── index.html
+│   ├── 404.html
+│   ├── index.html
+│   ├── robots.txt
+│   ├── site.webmanifest
+│   └── sitemap.xml
+├── templates/
+│   ├── footer.html
+│   └── header.html
+├── .gitignore
+├── FILE-TREE.txt
+├── LAUNCH-CHECKLIST.md
+├── QA-REPORT.md
+├── README.md
+├── package.json
+├── partner-migration-report.json
+└── vercel.json

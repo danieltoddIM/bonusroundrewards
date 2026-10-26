@@ -1,0 +1,125 @@
+{
+  "retrieved_at": "2026-10-26T21:02:11.859255+00:00",
+  "source_origin": "https://bonusroundrewards.com",
+  "status": "complete",
+  "pages": [
+    {
+      "source_url": "https://bonusroundrewards.com/",
+      "destination": "site/partners/index.html",
+      "archive_url": "https://bonusroundrewards.com/partners/",
+      "http_status": 200,
+      "source_bytes": 20511,
+      "source_sha256": "47c0789fc01785463aad329d517b75a7b27bbf2f1bd4ff1061c11f23f756346a",
+      "output_sha256": "176eff19253fbcd4d913838adddb7d5677c929489e1fe8f51b828f35834d9368",
+      "inline_scripts_unchanged": true
+    },
+    {
+      "source_url": "https://bonusroundrewards.com/economics-model",
+      "destination": "site/partners/economics-model/index.html",
+      "archive_url": "https://bonusroundrewards.com/partners/economics-model",
+      "http_status": 200,
+      "source_bytes": 11170,
+      "source_sha256": "d515d9e43171aeb4d1b765c972dd4094f1dc99f32d1073d17b39a030b1706fc3",
+      "output_sha256": "76efcf5af85d6b8d98c42452b5000a5f79515fd890e2ee54800b8d44b4a7526a",
+      "inline_scripts_unchanged": true
+    },
+    {
+      "source_url": "https://bonusroundrewards.com/install-model",
+      "destination": "site/partners/install-model/index.html",
+      "archive_url": "https://bonusroundrewards.com/partners/install-model",
+      "http_status": 200,
+      "source_bytes": 18538,
+      "source_sha256": "aca390e3bf492e3df135799676e7306a35f0490fc0bccfc175c1ffb3be88991b",
+      "output_sha256": "0d76a46f376151658c60bd1225208161735ff0dbff08315fae02efc72f7ddbdf",
+      "inline_scripts_unchanged": true
+    }
+  ],
+  "assets": [
+    {
+      "source_url": "https://bonusroundrewards.com/styles.css",
+      "destination": "site/partners/styles.css",
+      "http_status": 200,
+      "bytes": 29171,
+      "sha256": "09daf2197e75cfec5c964a34fbabbfa4a1986b6e45d7246f51dcf2ece78bedbb"
+    },
+    {
+      "source_url": "https://bonusroundrewards.com/assets/favicon.svg",
+      "destination": "site/partners/assets/favicon.svg",
+      "http_status": 200,
+      "bytes": 197,
+      "sha256": "e8d534232267e3a699629fadd4b0f460a6a75a12415c4764d68b0f3ff6d5f5e8"
+    },
+    {
+      "source_url": "https://bonusroundrewards.com/assets/discover.webp",
+      "destination": "site/partners/assets/discover.webp",
+      "http_status": 200,
+      "bytes": 171054,
+      "sha256": "a15cc4e6761836e68605f7999b5199f8aaf1e20bd4badcd675b1da5f7ec87ddf",
+      "public_app_copy": "site/assets/app/discover.webp"
+    },
+    {
+      "source_url": "https://bonusroundrewards.com/assets/daily-bonus.webp",
+      "destination": "site/partners/assets/daily-bonus.webp",
+      "http_status": 200,
+      "bytes": 158320,
+      "sha256": "48c84a03563de88e1d06eda3ffc7bf23e64a4b5eb5311e76cdd75b2447fe4dd4",
+      "public_app_copy": "site/assets/app/daily-bonus.webp"
+    },
+    {
+      "source_url": "https://bonusroundrewards.com/assets/bonus-unlocked.webp",
+      "destination": "site/partners/assets/bonus-unlocked.webp",
+      "http_status": 200,
+      "bytes": 138292,
+      "sha256": "34bedccd9942b870ac76813517d796f2657f2563bf138988f60b679a5e5ba005",
+      "public_app_copy": "site/assets/app/bonus-unlocked.webp"
+    },
+    {
+      "source_url": "https://bonusroundrewards.com/assets/my-games.webp",
+      "destination": "site/partners/assets/my-games.webp",
+      "http_status": 200,
+      "bytes": 157128,
+      "sha256": "4387fc6b3ffe46117dd94175afa67f8d47c5a28e2797ebc8f69d0055922fdc0e",
+      "public_app_copy": "site/assets/app/my-games.webp"
+    },
+    {
+      "source_url": "https://bonusroundrewards.com/assets/rewards.webp",
+      "destination": "site/partners/assets/rewards.webp",
+      "http_status": 200,
+      "bytes": 146144,
+      "sha256": "6eabef272cc0662c980ebf5c3b7f682afe6e64af887478cd258f19f7967e6e34",
+      "public_app_copy": "site/assets/app/rewards.webp"
+    }
+  ],
+  "missing": [],
+  "notes": [
+    "Preserved the three existing static pages and all their local dependencies.",
+    "No live website or domain was changed.",
+    "Original proposal content and all inline JavaScript retained. Only same-site link paths changed, with new archive canonical URL.",
+    "Archive is intentionally absent from public navigation and sitemap. noindex,nofollow is present on all three pages. Allow crawlers to fetch it so they can read noindex; noindex is not access control.",
+    "App screenshot copies are original existing-site illustrative artwork; any displayed brands, point amounts or sample balances are illustrative, not verified current app terms."
+  ],
+  "verification": {
+    "local_dependencies_missing": [],
+    "script_syntax": [
+      {
+        "page": "partners/index.html",
+        "script": 0,
+        "syntax_ok": true,
+        "error": ""
+      },
+      {
+        "page": "partners/install-model/index.html",
+        "script": 0,
+        "syntax_ok": true,
+        "error": ""
+      },
+      {
+        "page": "partners/economics-model/index.html",
+        "script": 0,
+        "syntax_ok": true,
+        "error": ""
+      }
+    ],
+    "browser_test": "not run by migration agent; parent may test from full preview"
+  }
+}

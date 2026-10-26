@@ -1,19 +1,78 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "node scripts/build.mjs",
+  "installCommand": "",
+  "outputDirectory": "site",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/economics-model",
+      "destination": "/partners/economics-model",
+      "permanent": true
+    },
+    {
+      "source": "/install-model",
+      "destination": "/partners/install-model",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-aNSgrxxV/KD8+iMT1cBHDAJg2E5uwmVoDwq4lKgxXOQ=' 'sha256-5UZPP5qp5fDekMshV1VFYukbTpCI7Val8UmTAgSLEhQ=' 'sha256-QDuUl+8dnOxRHFh0s2Q2fKJXZxRwDaj8y1sWL6tka1Q=' 'sha256-kXugOaoPnni/t9Qb2aU3SHEOFW9ANi/QFgyDDHzuLDs=' 'sha256-qIwqhuh4qM0TJ06ETRC855PBN1WhnA3HtjFILZA9F3A='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:; upgrade-insecure-requests"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000"
+        }
       ]
     },
     {
-      "source": "/assets/(.*)",
+      "source": "/partners",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/partners/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/assets/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
       ]
     }
   ]
