@@ -1,0 +1,27 @@
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div class="footer-brand"><a class="wordmark wordmark-light" href="/" aria-label="Bonus Round home"><span class="wordmark-icon" aria-hidden="true">{{icon:round}}</span><span>BONUS<br>ROUND</span></a><p>A little play.<br>A little more to look forward to.</p></div>
+      <nav aria-label="Explore"><h2>Explore</h2><a href="/how-it-works">How it works</a><a href="/faq">FAQ</a><a href="/about">About us</a><a href="/download">Get the app</a></nav>
+      <nav aria-label="Help"><h2>Here to help</h2><a href="/support">Contact support</a><a href="/account-deletion">Account &amp; data deletion</a><a href="/rewards-rules">Rewards rules</a><a href="mailto:{{supportEmail}}">{{supportEmail}}</a></nav>
+      <nav aria-label="Legal"><h2>The details</h2><a href="/privacy-policy">Privacy Policy</a><a href="/terms">Terms of Use</a><a href="/do-not-sell">Do Not Sell or Share My Personal Information</a><a href="/cookies">Cookies &amp; preferences</a><button type="button" class="text-button cookie-settings" hidden>Cookie settings</button></nav>
+    </div>
+    <div class="footer-legal"><p><strong>{{legalEntity}}</strong>, {{legalForm}}.<br>{{mailingAddress}}<br>Bonus Round is {{operatorStatement}}.</p><p>Rewards are earned through eligible gameplay. Gift card brands are not sponsors of or affiliated with Bonus Round. Apple and Google are not sponsors of this program.</p></div>
+    <div class="footer-bottom"><p>© {{copyrightYear}} {{legalEntity}}</p><p>For eligible adults 18+.</p></div>
+  </div>
+</footer>
+<section class="cookie-banner" id="cookie-banner" role="region" aria-labelledby="cookie-title" hidden>
+  <div class="cookie-copy"><h2 id="cookie-title">Your privacy, your choice.</h2><p>This website uses essential storage to remember your privacy choices. Optional cookies are off. <a href="/cookies">About cookies</a></p><p class="gpc-notice" hidden>Your browser’s Global Privacy Control signal is on. Optional cookies stay off.</p></div>
+  <div class="cookie-actions"><button class="button button-navy" type="button" data-consent="essential">Essential only</button><button class="button button-outline" type="button" data-consent="all">Accept optional</button><button class="text-button cookie-settings" type="button">Manage choices</button></div>
+</section>
+<dialog class="cookie-dialog" id="cookie-dialog" aria-labelledby="cookie-dialog-title" aria-describedby="cookie-dialog-description">
+  <div class="dialog-header"><h2 id="cookie-dialog-title">Cookie preferences</h2><button type="button" class="icon-button" data-close-dialog aria-label="Close cookie preferences">{{icon:close}}</button></div>
+  <p id="cookie-dialog-description">Choose how this website may use optional storage. These choices apply to this browser, not to your Bonus Round app account.</p>
+  <div class="cookie-option"><div><strong>Essential storage</strong><p>Remembers your choice and supports basic website functions.</p></div><span class="pill">Always on</span></div>
+  <label class="cookie-option" for="consent-analytics"><span><strong>Analytics</strong><span class="field-help">Helps understand website use. No analytics service is currently installed.</span></span><input type="checkbox" id="consent-analytics"></label>
+  <label class="cookie-option" for="consent-marketing"><span><strong>Marketing</strong><span class="field-help">Supports advertising measurement. No marketing service is currently installed.</span></span><input type="checkbox" id="consent-marketing"></label>
+  <p class="gpc-notice notice" hidden>Global Privacy Control is on. Optional cookies are disabled for this browser.</p>
+  <div class="button-row"><button class="button button-navy" type="button" id="save-cookie-preferences">Save preferences</button><button class="button button-outline" type="button" data-consent="essential">Essential only</button></div>
+  <p class="small">For an account or app privacy request, use <a href="/do-not-sell">Do Not Sell or Share My Personal Information</a>.</p>
+</dialog>
+<p class="sr-only" id="site-status" role="status" aria-live="polite"></p>

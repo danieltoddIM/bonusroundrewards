@@ -1,0 +1,157 @@
+{
+  "prepared_on": "2026-10-26",
+  "status": "Draft content for attorney and operational review; not a compliance certification or a final policy.",
+  "operator_placeholder": "[Bonus Round Rewards LLC]",
+  "relationship_selected": "operated by Bonus Round Rewards LLC",
+  "public_routes": {
+    "privacy-policy": "/privacy-policy",
+    "terms": "/terms",
+    "account-deletion": "/account-deletion",
+    "do-not-sell": "/do-not-sell",
+    "rewards-rules": "/rewards-rules"
+  },
+  "assumptions_to_match_in_code": [
+    "The public website includes no optional analytics or advertising scripts.",
+    "Cookie preference is stored locally; footer provides a Cookie settings control.",
+    "Supported browser Global Privacy Control is recognized and optional tracking remains off.",
+    "Public website has no login or mechanism linking browser preference to a Bonus Round app account.",
+    "mailto actions open drafts and do not display a request-submitted or request-completed confirmation.",
+    "Email addresses are visibly copyable, allowing use without a configured local mail application."
+  ],
+  "sources": [
+    {
+      "title": "Understanding Google Play’s app account deletion requirements",
+      "publisher": "Google Play Console Help",
+      "url": "https://support.google.com/googleplay/android-developer/answer/13327111?hl=en",
+      "ref_ids": [
+        "turn3view0",
+        "turn4view2"
+      ],
+      "verified_requirement": "Apps offering account creation need an in-app deletion path and an external web resource for account/data deletion requests. The web resource must identify the app or developer and provide an actual pathway; Google lists a customer-service email as one permitted method. It must not force a user to reinstall the app.",
+      "implication": "Publish /account-deletion with a working, monitored privacy mailbox. Confirm the actual in-app deletion flow, retained data, and timing. The page alone does not complete app compliance."
+    },
+    {
+      "title": "5.1.1(v) — Offering account deletion in your app",
+      "publisher": "Apple Developer",
+      "url": "https://developer.apple.com/help/app-review/guideline-reference/5-1-1-account-deletion/",
+      "ref_ids": [
+        "turn3view1",
+        "turn4view0",
+        "turn4view3"
+      ],
+      "verified_requirement": "Apps supporting account creation must allow people to initiate deletion within the app. Outside highly regulated industries, users should not be required to call, email, chat, or use another support flow to delete the account.",
+      "implication": "The website email option is an additional access route. It must not substitute for the app deletion feature. Confirm behavior in the shipped iOS build; complete the in-app path placeholder only after testing."
+    },
+    {
+      "title": "Global Privacy Control (GPC)",
+      "publisher": "California Department of Justice",
+      "url": "https://oag.ca.gov/privacy/ccpa/gpc",
+      "ref_ids": [
+        "turn3view2",
+        "turn4view1"
+      ],
+      "verified_requirement": "Covered businesses must honor a qualifying GPC signal as a sale/sharing opt-out. The signal is a privacy choice, not merely a cookie preference.",
+      "implication": "Do not claim app/account-wide completion from a local browser flag. Audit collection and sharing in the app and all SDKs; connect the choice to known accounts when required and technically identifiable."
+    },
+    {
+      "title": "California Consumer Privacy Act (CCPA)",
+      "publisher": "California Department of Justice",
+      "url": "https://www.oag.ca.gov/privacy/ccpa",
+      "ref_ids": [
+        "turn3view3",
+        "turn4view4"
+      ],
+      "verified_requirement": "California rights include access/knowledge, deletion, correction, sale/sharing opt-out, applicable sensitive-information limits, and protection from unlawful discrimination. Its consumer guidance describes a 45-calendar-day response period for covered access, deletion, and correction requests, with a permitted notified extension.",
+      "implication": "Draft states applicable legal deadlines, without inventing a shorter company promise. Counsel and operations must set an acknowledgment/response schedule and validate scope, exceptions, and regional variations."
+    },
+    {
+      "title": "CCPA Regulations effective January 1, 2026",
+      "publisher": "California Privacy Protection Agency",
+      "url": "https://cppa.ca.gov/regulations/pdf/ccpa_statute_eff_20260101.pdf",
+      "ref_ids": [
+        "turn3view4",
+        "turn4view5",
+        "turn4view6",
+        "turn4view7"
+      ],
+      "verified_requirement": "Sections 7025–7026 govern preference signals and opt-out methods; a covered website selling/sharing needs an interactive online method, and signal handling includes displaying the choice status. Known-account handling differs from an unrecognized browser. Section 7016 requires a separate notice for an applicable financial incentive.",
+      "implication": "An email-only static page is not a certification that CCPA opt-out duties are satisfied. Determine applicability, implement a real online opt-out endpoint if required, propagate choices, and test them. Counsel should assess whether the rewards arrangement needs an incentive notice and valuation explanation."
+    }
+  ],
+  "launch_decisions": [
+    {
+      "priority": "blocking",
+      "owner": "Company leadership / counsel",
+      "decision": "Confirm legal entity name, Arizona status, mailing address, and the permitted operator relationship. The supplied name and address are preserved as bracketed placeholders."
+    },
+    {
+      "priority": "blocking",
+      "owner": "Product / operations",
+      "decision": "Confirm supported countries, minimum OS/device support, account limits, game eligibility, attribution requirements, and age-verification process."
+    },
+    {
+      "priority": "blocking",
+      "owner": "Product / rewards operations",
+      "decision": "Approve point-credit timing, bonus/streak rules and time zone, point expiry, redemption minimums/limits, fulfillment timing, failed-delivery handling, and account-closure consequences."
+    },
+    {
+      "priority": "blocking",
+      "owner": "Engineering / privacy counsel",
+      "decision": "Inventory actual data fields, SDKs and partners, contracts, sources, purposes, lawful bases, sale/sharing/targeted-advertising determination, sensitive data, and any profiling."
+    },
+    {
+      "priority": "blocking",
+      "owner": "Engineering / operations",
+      "decision": "Implement and test in-app account deletion, a monitored external request route, proportionate account verification, processor deletion, retained categories, backup handling, and documented timelines."
+    },
+    {
+      "priority": "blocking",
+      "owner": "Privacy counsel / engineering",
+      "decision": "Assess state-law coverage and build any required interactive opt-out endpoint and SDK/account propagation. A mailto draft and localStorage preference are not completed requests."
+    },
+    {
+      "priority": "blocking",
+      "owner": "Privacy counsel",
+      "decision": "Assess whether any financial-incentive disclosure and opt-in/withdrawal process is required for rewards; do not assume a reward program automatically is or is not covered."
+    },
+    {
+      "priority": "blocking",
+      "owner": "Counsel",
+      "decision": "Finalize Privacy and Terms, effective dates, dispute resolution, governing law, court venue, any arbitration agreement and opt-out, disclaimers, and liability provisions. The draft imposes no arbitration agreement or class waiver."
+    },
+    {
+      "priority": "blocking",
+      "owner": "IT / support",
+      "decision": "Create and monitor support@bonusroundrewards.com and privacy@bonusroundrewards.com. Test receipt and replies, assign request owners, and create records and response procedures."
+    },
+    {
+      "priority": "blocking",
+      "owner": "App release owner",
+      "decision": "Ensure the website disclosures match Apple App Privacy and Google Play Data safety declarations and the production app, not only a prototype."
+    },
+    {
+      "priority": "conditional",
+      "owner": "Counsel / engineering",
+      "decision": "If enabling more countries, confirm jurisdiction-specific rights, data-transfer mechanisms, representatives, legal bases, retention, and regulator contacts before launch there."
+    },
+    {
+      "priority": "conditional",
+      "owner": "Engineering / privacy counsel",
+      "decision": "Before adding optional website scripts, connect them to the consent controller and opt-out signal, update disclosures, and verify requests remain blocked after rejection."
+    }
+  ],
+  "design_integration": {
+    "fragment_format": "Body fragments only: no h1, header, footer, HTML head, JSON-LD, or metadata.",
+    "shared_classes": [
+      "draft-notice",
+      "placeholder",
+      "legal-date",
+      "small",
+      "button",
+      "button-primary"
+    ],
+    "headings": "Each section has a stable id and h2; select sections contain h3.",
+    "indexing": "No noindex added; public drafts remain indexable per request.",
+    "citation_note": "Sources are retained here as implementation/review evidence. Public draft pages do not imply those sources endorse Bonus Round."
+  }
+}
