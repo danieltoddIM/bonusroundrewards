@@ -1,25 +1,30 @@
-# Bonus Round website refinement QA
+# Bonus Round actual screenshot integration QA
 
-Verified November 5, 2026. This package supersedes the earlier company-identity package. No production deployment was performed.
+Verified November 5, 2026. No production deployment was performed.
 
-## Changes
+## Integration
 
-- Replaced generic gift card illustrations and bracketed brand boxes with the owner's existing Amazon, Target and Walmart card artwork. The artwork is copied unchanged from the existing website assets, and these brands also appear in the existing illustrative app screens. Examples are labeled; Bonus Round launch availability still requires confirmation.
-- Simplified homepage order to hero, rewards, three steps, existing app preview gallery, FAQ and download availability. Removed the separate repeated bonus promotion; detailed bonus explanations remain on How It Works.
-- Shortened homepage and shared call-to-action copy. No payout totals, ratings, testimonials, earnings promises or unconfirmed delivery times were copied from another app.
-- Removed personal mailing address and telephone details from all public pages, JSON-LD and shared configuration. Updated About, Support, footer and all legal contact sections. Company operator/publisher identity and support/privacy emails remain; business email remains on About and Support.
-- Preserved original app image files, hero/gallery image markup and all existing CSS rules. Only gift-card-specific CSS was appended. App design and screenshot/frame work remain deferred.
+All five owner-supplied images are now used in public pages:
 
-## Verification
+- 27: edited Klondike level 12 home screen, homepage hero.
+- 31: edited Klondike level 12 offer detail, homepage hero/gallery and How It Works.
+- 29: edited RAID level 8 game list, homepage gallery and How It Works.
+- 25: welcome overlay, homepage gallery.
+- 33: original launch screen, About page.
 
-- Build passed: 13 public/error pages generated with synchronized SEO files and Vercel CSP configuration.
-- Structural checks passed: 2,588 assertions covering 13 public/error pages and three archived pages.
-- Privacy/metadata audit passed: no personal address/telephone or former-company name in public HTML; Organization/ContactPoint schema has no address or telephone. All JSON-LD hashes match CSP.
-- Preservation audit passed: every partner archive file and app image is byte-for-byte unchanged. Partner noindex directives, headers, navigation exclusion and sitemap exclusion pass the structural checks.
-- Hero and preview-gallery image markup matches the previous package exactly; existing CSS remains an unchanged prefix of the new stylesheet.
-- Browser checks: inspected the 1280 px homepage/rewards layout. All three gift-card images loaded. Homepage had no horizontal overflow at 1280 px or 320 px. Mobile card images also loaded correctly. The rewards preview screenshot is supplied with the download.
-- Launch check still fails for existing unresolved app operations, effective dates, missing store links and approval flags. Full current output is in LAUNCH-CHECK-RESULTS.txt. These are not structural build failures.
+App image files match the approved edited PNG files and original launch JPEG byte for byte. No further image edits, cropping or recompression were performed. Website styling displays full screenshots with their correct aspect ratio and removes the old added white frames and fixed-height clipping. Old consumer WebP mockups were removed; archived partner images remain unchanged.
 
-## Remaining launch work
+## Validation
 
-Confirm the gift card catalog, actual app policies, legal drafts and any required business mailing-address disclosure. Test email delivery, actual app/deletion/rewards flows and the deployed website before launch. No home address or personal phone was substituted for a business contact requirement. The current live website was not changed.
+- Build passed; 13 public/error pages regenerated with updated Content Security Policy hashes.
+- 2,592 structural checks passed across 13 public/error pages and three archived pages.
+- All five new assets are referenced in public pages and match their input files byte for byte.
+- All partner archive files are byte-for-byte unchanged. Existing noindex and sitemap/navigation exclusions remain.
+- No former-company reference, home address or personal phone in public HTML. No references to old consumer mockup files remain.
+- Browser: homepage hero and all three gallery images loaded; desktop layout visually inspected at 1280 px. Homepage, How It Works and About had no horizontal overflow at 320 px. Screenshot saved with deliverables.
+
+Existing launch blockers remain: legal drafts, unconfirmed operational policies, missing store listings, effective dates and approval flags. These were not approved by this image update. Test-build image captions explain that displayed offers, values, timers and activity counts are examples. The existing actual gift-card artwork and company contact cleanup remain in place.
+
+## Image disclaimer update
+
+Added the owner-requested wording below homepage screenshots, gift-card artwork and each How It Works screenshot. Additional text covers illustrative previews, changing offer amounts/requirements/availability, and checking current in-app eligibility, deadlines and redemption terms. Rebuilt successfully and passed all 2,592 structural checks. Image assets and partner archive were not changed.

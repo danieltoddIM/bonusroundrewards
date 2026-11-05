@@ -46,11 +46,11 @@ bonus-round/
     ├── sitemap.xml
     ├── assets/
     │   └── app/
-    │       ├── discover.webp
-    │       ├── daily-bonus.webp
-    │       ├── bonus-unlocked.webp
-    │       ├── my-games.webp
-    │       └── rewards.webp
+    │       ├── home.png
+    │       ├── welcome.png
+    │       ├── game-offers.png
+    │       ├── klondike-offer.png
+    │       └── launch.jpg
     └── partners/
         ├── index.html
         ├── economics-model/index.html
@@ -91,7 +91,7 @@ Replace the bracketed values using verified business decisions. Do not substitut
 
 Adding either store URL updates the corresponding buttons, download-page availability and relevant metadata when you rebuild. The other platform can remain marked coming soon. Confirm both URLs before a full launch. Set `legalApproved`, `operationsVerified`, `publicAssetsApproved`, and `contactInboxesVerified` only after the corresponding work is complete. Those flags do not erase draft text or replace unresolved decisions; edit and approve the content itself.
 
-The five WebP app images were copied from the existing Bonus Round site. They are illustrative mockups and may contain sample brands, balances, and rewards. Confirm that the images represent the released app and that all displayed names/artwork may be used. No invented testimonials, public payout statistics, ratings, or player counts are needed for this site.
+The five app images are owner-supplied screenshots, with only the requested level-text edits. The site identifies test-build offers, values, timers and activity counts as examples. Confirm that displayed offers and artwork are approved for launch.
 
 ## Public company identity and privacy
 
@@ -106,7 +106,7 @@ Personal address and telephone details are excluded from public pages, structure
 
 The homepage uses existing Amazon, Target and Walmart card artwork from the owner's website assets. These three brands also appear in the preserved illustrative app screens. They are presented as examples, with launch selection and redemption requirements awaiting confirmation. `giftCardExamples` controls the artwork separately from any confirmed live rewards catalog. Do not add payout claims or reuse another app's reviews or statistics.
 
-App screenshot files and their styling are unchanged pending the final app design. The homepage now leads from the hero to gift cards, three steps, the existing preview gallery, FAQ and availability.
+Actual owner-supplied screenshots now replace the old consumer mockups. Klondike shows Reach level 12 and RAID shows Complete level 8. The image files are copied without further alteration; CSS displays full screenshots without added white frames. All screenshots are identified as test-build examples. The homepage now leads from the hero to gift cards, three steps, the existing preview gallery, FAQ and availability.
 
 ## Contact forms and cookie preferences
 

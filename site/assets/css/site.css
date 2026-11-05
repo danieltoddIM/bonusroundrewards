@@ -297,3 +297,21 @@ address{font-style:normal}
 .reward-catalog-note{font-size:12px;color:#d5e0ea;margin-top:24px;max-width:720px}
 @media(max-width:850px){.reward-catalog{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 20px}}
 @media(max-width:580px){.reward-catalog{grid-template-columns:1fr;gap:24px}.reward-brand{width:100%;max-width:280px;margin-inline:auto}.reward-brand figcaption{font-size:14px}.reward-section .section-heading{align-items:flex-start}}
+
+/* Actual app screenshots: full image, no added white frame or cropped viewport. */
+.hero-phone{border-radius:0;height:auto}
+.hero-phone-front{width:245px;left:35px}
+.hero-phone-back{width:228px;right:4px;top:65px}
+.preview-frame,.preview-gallery figure:nth-child(2) .preview-frame,.preview-gallery figure:nth-child(3) .preview-frame{height:auto;padding:0;background:transparent;overflow:visible;border-radius:0}
+.preview-frame img{width:100%;max-width:290px;height:auto;border-radius:0}
+.how-step .phone-thumb{height:auto;overflow:visible;background:transparent;padding:0;border-radius:0}
+.how-step .phone-thumb img{width:100%;max-width:250px;height:auto;border-radius:0}
+.redemption-art img{width:100%;max-width:300px;margin-inline:auto}
+.redemption-art p{text-align:center;margin-top:15px}
+.app-launch-preview img{display:block;width:190px;max-width:100%;height:auto;margin-inline:auto;box-shadow:0 12px 30px #102e5022}
+@media(max-width:1100px){.hero-phone-front{width:220px;left:10px}.hero-phone-back{width:200px;right:0}}
+@media(max-width:850px){.hero-phone-front{width:235px;left:65px}.hero-phone-back{width:215px;right:25px}}
+@media(max-width:580px){.hero-phone-front{width:175px;left:30px}.hero-phone-back{width:159px;right:13px;top:60px}}
+@media(max-width:350px){.hero-phone-front{width:157px;left:14px}.hero-phone-back{width:143px;right:4px}}
+
+.how-step .screenshot-disclaimer{font-size:12px;line-height:1.6;color:var(--muted);max-width:300px;margin:16px auto 0}
