@@ -1,0 +1,21 @@
+{
+  "name": "Bonus Round",
+  "short_name": "Bonus Round",
+  "description": "Play games. Earn gift cards.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f7f9f4",
+  "theme_color": "#102e50",
+  "icons": [
+    {
+      "src": "/assets/brand/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/brand/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
