@@ -85,7 +85,7 @@ Public pages include metadata and canonical URLs for `https://bonusroundrewards.
 
 ## Configuration and copy
 
-`config/site.json` centralizes the operator, mailing address, contact emails, store URLs, and unresolved app-policy details. The chosen relationship is **“operated and published by Bonus Round Rewards LLC”**; the public site does not assert a parent-company or subsidiary relationship.
+`config/site.json` centralizes the operator, contact emails, gift card examples, store URLs, and unresolved app-policy details. The chosen relationship is **“operated and published by Bonus Round Rewards LLC”**; the public site does not assert a parent-company or subsidiary relationship.
 
 Replace the bracketed values using verified business decisions. Do not substitute assumed redemption times, supported countries, account-deletion menus, retention periods, point exchange rates, or response promises. Privacy and Terms are deliberately marked **DRAFT FOR ATTORNEY REVIEW**. Use `LAUNCH-CHECKLIST.md` to finish and approve these inputs.
 
@@ -93,16 +93,20 @@ Adding either store URL updates the corresponding buttons, download-page availab
 
 The five WebP app images were copied from the existing Bonus Round site. They are illustrative mockups and may contain sample brands, balances, and rewards. Confirm that the images represent the released app and that all displayed names/artwork may be used. No invented testimonials, public payout statistics, ratings, or player counts are needed for this site.
 
-## Final public company identity
+## Public company identity and privacy
 
-- Legal entity and operator/publisher: Bonus Round Rewards LLC
-- Mailing address: 30 Forest Circle, Sedona, AZ 86336
+- Operator and publisher: Bonus Round Rewards LLC
 - Support: support@bonusroundrewards.com
 - Privacy: privacy@bonusroundrewards.com
-- Primary business email: daniel@bonusroundrewards.com
-- Public phone: 206.769.3722 (`tel:+12067693722`)
+- Business inquiries on About and Support: daniel@bonusroundrewards.com
 
-These values are centralized in `config/site.json`. Public pages and structured data use this standalone identity. The unlisted partner archive is preserved separately. Alias setup is confirmed by the owner; delivery and monitoring have not been tested in this update.
+Personal address and telephone details are excluded from public pages, structured data and shared configuration. Any required business mailing-address disclosure remains a launch-review item; do not automatically republish personal details.
+
+## Rewards artwork
+
+The homepage uses existing Amazon, Target and Walmart card artwork from the owner's website assets. These three brands also appear in the preserved illustrative app screens. They are presented as examples, with launch selection and redemption requirements awaiting confirmation. `giftCardExamples` controls the artwork separately from any confirmed live rewards catalog. Do not add payout claims or reuse another app's reviews or statistics.
+
+App screenshot files and their styling are unchanged pending the final app design. The homepage now leads from the hero to gift cards, three steps, the existing preview gallery, FAQ and availability.
 
 ## Contact forms and cookie preferences
 

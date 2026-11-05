@@ -4,9 +4,11 @@ Prepared October 26, 2026. Use this checklist before replacing the current produ
 
 ## 1. Complete the company and app facts
 
-- [x] Finalize public identity: **Bonus Round Rewards LLC**, 30 Forest Circle, Sedona, AZ 86336; operator and publisher of Bonus Round.
-- [x] Publish support@bonusroundrewards.com, privacy@bonusroundrewards.com, primary business email daniel@bonusroundrewards.com, and public phone 206.769.3722. Support and privacy aliases were reported set up by the owner.
-- [ ] Test inbox delivery, branded replies, monitoring and public phone routing; alias setup alone does not complete delivery verification.
+- [x] Publish Bonus Round Rewards LLC as the standalone operator and publisher, with support/privacy emails and a business inquiry email.
+- [x] Exclude personal address and phone information from the public package and metadata.
+- [ ] Resolve any required business mailing-address disclosure and app-store contact requirements using suitable business contact details before launch.
+- [ ] Test delivery, branded replies and monitoring for the support/privacy aliases reported set up by the owner.
+- [ ] Confirm the launch gift card catalog and approve use of the example Amazon, Target and Walmart artwork.
 - [ ] Replace the App Store and Google Play placeholders with the exact live Bonus Round listings. Confirm the app name, operator, supported operating systems, and territory availability agree with each listing.
 - [ ] Confirm supported countries, age requirement of 18+, account restrictions, qualifying gameplay, tracking prerequisites, and supported devices. Publish no inferred countries or device requirements.
 - [ ] Set verified reward conversion values, minimum redemptions, limits, delivery timing, bonus/streak conditions, expiry rules if any, and fraud-review procedures. Keep sample screenshot values explicitly illustrative until replaced.
@@ -19,7 +21,7 @@ Prepared October 26, 2026. Use this checklist before replacing the current produ
 
 - [ ] Have counsel review Privacy Policy and Terms, including CCPA/CPRA and other applicable state rights, international availability/transfers, data sharing, advertising identifiers, SDKs, retention, children's privacy, security language, Arizona governing law, and any arbitration/opt-out provision.
 - [ ] Have counsel review Rewards Rules, account/data deletion disclosures, the Do Not Sell or Share page, cookie disclosures, fraud/VPN/emulator rules, and limits/exceptions. Confirm each statement matches actual practice.
-- [ ] Set approved effective dates and remove **DRAFT FOR ATTORNEY REVIEW** only after review and business approval. Confirm the footer names the operator/address and reads `© 2026 [approved legal entity name]`.
+- [ ] Set approved effective dates and remove **DRAFT FOR ATTORNEY REVIEW** only after review and business approval. Confirm the footer names the operator and reads `© 2026 [approved legal entity name]`.
 - [ ] Assign owners for support, privacy requests, identity verification, required response deadlines, appeals where applicable, deletion, and third-party data deletion. Avoid publishing an unverified service-level promise.
 - [ ] Implement and test the actual in-app account deletion capability. Apple's guidance requires in-app initiation and ordinarily does not permit mandatory email/customer-service completion; this website's email alternative is not a substitute. Google Play also requires an in-app path and an external web resource that lets users request deletion. See [Apple account deletion guidance](https://developer.apple.com/help/app-review/guideline-reference/5-1-1-account-deletion) and [Google Play account deletion requirements](https://support.google.com/googleplay/android-developer/answer/13327111?hl=en).
 - [ ] Test a real deletion through the in-app route and the external email route, verify the result in relevant systems, and confirm documented retained records and processor actions. Test an actual privacy opt-out end to end; a website cookie choice alone does not perform an account-level opt-out.

@@ -286,3 +286,14 @@ address{font-style:normal}
 @media(max-width:580px){.cookie-copy p{font-size:12px}.footer-legal,.footer-bottom{font-size:12px}.hero-caption,.gallery-note,.brand-strip-note{font-size:12px}.hero-note{font-size:12px}.store-note{font-size:12px}.store-badge small{font-size:11px}.store-badge strong{font-size:16px}.cookie-actions .button,.cookie-actions .text-button{font-size:12px}.preview-gallery figcaption span{font-size:15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 @media print{.site-header,.site-footer,.cookie-banner,.cookie-dialog,.legal-toc,.download-cta,.skip-link{display:none!important}body{background:white;color:black;font:12pt/1.5 Arial,sans-serif}.shell{width:100%}.page-hero,.content-section{padding:20px 0}.legal-layout{display:block}.prose{max-width:none}.prose h2{break-after:avoid}.prose section{break-inside:auto}a{color:black}.draft-notice{border:1px solid black}.placeholder{border:1px dashed black}}
+
+/* Real gift card artwork; app screenshot styles above are unchanged. */
+.reward-section .section-heading{align-items:flex-end}
+.reward-section .section-heading p{color:#d5e0ea}
+.reward-catalog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.reward-brand{margin:0;min-width:0}
+.reward-brand img{display:block;width:100%;height:auto;aspect-ratio:600/380;object-fit:contain;filter:drop-shadow(0 12px 16px #0003)}
+.reward-brand figcaption{font-size:15px;font-weight:700;margin-top:14px;color:#fff}
+.reward-catalog-note{font-size:12px;color:#d5e0ea;margin-top:24px;max-width:720px}
+@media(max-width:850px){.reward-catalog{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 20px}}
+@media(max-width:580px){.reward-catalog{grid-template-columns:1fr;gap:24px}.reward-brand{width:100%;max-width:280px;margin-inline:auto}.reward-brand figcaption{font-size:14px}.reward-section .section-heading{align-items:flex-start}}

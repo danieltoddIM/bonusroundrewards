@@ -39,9 +39,10 @@ const storeStatus = allStoresLive ? 'Find Bonus Round on iPhone and Android.' : 
 const availabilityCards = () => `<div class="availability">${[
   ['App Store','iPhone',config.appStoreUrl,'phone'],['Google Play','Android',config.googlePlayUrl,'play']
 ].map(([name,device,url,mark])=>`<section class="availability-card">${icon(mark)}<h2>${name}</h2><p>${url ? `Visit the official Bonus Round listing for ${device}. Check supported devices and country availability in the store.` : `For ${device}. Check back for the official Bonus Round ${name} listing.`}</p>${url ? `<p><a class="button button-navy" href="${escape(url)}" rel="external">View on ${name} ${icon('arrow')}</a></p>` : '<span class="pill">Coming soon</span>'}</section>`).join('')}</div>`;
-const previewNotice = 'Illustrative app previews. Games, brands, points, bonuses and gift card values shown are examples, not confirmed live offers or partnerships.';
-const downloadCTA = () => `<section class="shell" aria-labelledby="download-cta-heading"><div class="download-cta"><div><span class="eyebrow">Make time for a little play</span><h2 id="download-cta-heading">Your next round could be a rewarding one.</h2><p>Discover games. Work toward a goal. Choose a gift card. That’s Bonus Round.</p></div><div>${storeButtons()}<p class="store-note">${config.appStoreUrl || config.googlePlayUrl ? 'Availability depends on your device and location.' : 'Download links will be added at launch.'}</p></div></div></section>`;
-const brands = () => `<div class="brand-strip" aria-label="Gift card brand placeholders">${(config.giftCardBrands.length ? config.giftCardBrands : ['[Gift card brand 1]','[Gift card brand 2]','[Gift card brand 3]']).map(name => `<div class="brand-slot">${escape(name)}</div>`).join('')}</div><p class="brand-strip-note">${config.giftCardBrands.length ? 'Selection and availability may vary. Check the app for the current catalog.' : 'Gift card selection will be confirmed at launch. Brand spaces are placeholders.'}</p>`;
+const previewNotice = 'App previews are illustrative. Final design and launch offers may change.';
+const downloadCTA = () => `<section class="shell" aria-labelledby="download-cta-heading"><div class="download-cta"><div><span class="eyebrow">Make time for a little play</span><h2 id="download-cta-heading">Ready to play and earn?</h2><p>Choose a game, complete its goals, and redeem your points for available gift cards.</p></div><div>${storeButtons()}<p class="store-note">${config.appStoreUrl || config.googlePlayUrl ? 'Availability depends on your device and location.' : 'Download links will be added at launch.'}</p></div></div></section>`;
+const brands = () => `<div class="reward-catalog" aria-label="Example gift cards">${config.giftCardExamples.map(card => `<figure class="reward-brand"><img src="${escape(card.image)}" alt="${escape(card.name)} gift card" width="600" height="380" loading="lazy" decoding="async"><figcaption>${escape(card.name)}</figcaption></figure>`).join('')}</div><p class="reward-catalog-note">Gift cards shown are examples. Bonus Round’s available brands and redemption requirements will be confirmed at launch.</p>`;
+
 const pages = [
  {slug:'',file:'home',title:'Play games. Earn gift cards.',description:'Discover games, earn points through eligible gameplay, and redeem gift cards with Bonus Round. Explore how it works and get ready for your next round.',kind:'public',layout:'home'},
  {slug:'how-it-works',title:'How it works',heading:'A little play. A little progress. A reward you choose.',description:'Learn how to discover eligible games, earn Bonus Round points, explore bonuses and daily streaks, and redeem gift cards.',intro:'From finding a game to choosing a gift card, here’s how your next round works.',kind:'public'},
@@ -72,7 +73,6 @@ function replaceTokens(text, page) {
   // The legal fragments retain explicit operational brackets until these values are confirmed.
   const substitutions = {
     '[Bonus Round Rewards LLC]':config.legalEntity,
-    '[street, city, AZ ZIP]':config.mailingAddress,
     '[confirmed supported countries]':config.supportedCountries,
     '[confirmed redemption processing time]':config.redemptionTiming,
     '[confirmed in-app deletion path]':config.inAppDeletionPath,
@@ -85,9 +85,9 @@ function replaceTokens(text, page) {
 }
 const organization = {
   '@type':'Organization','@id':config.origin+'/#organization',name:config.name,legalName:config.legalEntity,url:config.origin+'/',
-  logo:config.origin+'/assets/brand/icon-512.png',email:config.businessEmail,telephone:config.phoneInternational,
-  address:{'@type':'PostalAddress',...config.postalAddress},description:'Bonus Round is '+config.operatorStatement+'.',
-  contactPoint:[{'@type':'ContactPoint',contactType:'customer support',telephone:config.phoneInternational,email:config.supportEmail,url:config.origin+'/support'},{'@type':'ContactPoint',contactType:'privacy',email:config.privacyEmail,url:config.origin+'/do-not-sell'},{'@type':'ContactPoint',contactType:'business inquiries',email:config.businessEmail,telephone:config.phoneInternational,url:config.origin+'/about'}]
+  logo:config.origin+'/assets/brand/icon-512.png',email:config.businessEmail,
+  description:'Bonus Round is '+config.operatorStatement+'.',
+  contactPoint:[{'@type':'ContactPoint',contactType:'customer support',email:config.supportEmail,url:config.origin+'/support'},{'@type':'ContactPoint',contactType:'privacy',email:config.privacyEmail,url:config.origin+'/do-not-sell'},{'@type':'ContactPoint',contactType:'business inquiries',email:config.businessEmail,url:config.origin+'/about'}]
 };
 const tocFrom = source => [...source.matchAll(/<h2\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)].map(match=>({id:match[1],text:match[2].replace(/<[^>]+>/g,'')}));
 const sectionTocFrom = source => [...source.matchAll(/<section\b[^>]*\bid="([^"]+)"[^>]*>\s*<h2\b[^>]*>([\s\S]*?)<\/h2>/g)].map(match=>({id:match[1],text:match[2].replace(/<[^>]+>/g,'')}));

@@ -3,7 +3,6 @@
   "origin": "https://bonusroundrewards.com",
   "legalEntity": "Bonus Round Rewards LLC",
   "legalForm": "an Arizona limited liability company",
-  "mailingAddress": "30 Forest Circle, Sedona, AZ 86336",
   "operatorStatement": "operated and published by Bonus Round Rewards LLC",
   "supportEmail": "support@bonusroundrewards.com",
   "privacyEmail": "privacy@bonusroundrewards.com",
@@ -22,14 +21,18 @@
   "publicAssetsApproved": false,
   "contactInboxesVerified": false,
   "businessEmail": "daniel@bonusroundrewards.com",
-  "publicPhone": "206.769.3722",
-  "phoneUri": "tel:+12067693722",
-  "phoneInternational": "+1-206-769-3722",
-  "postalAddress": {
-    "streetAddress": "30 Forest Circle",
-    "addressLocality": "Sedona",
-    "addressRegion": "AZ",
-    "postalCode": "86336",
-    "addressCountry": "US"
-  }
+  "giftCardExamples": [
+    {
+      "name": "Amazon",
+      "image": "/assets/rewards/amazon.png"
+    },
+    {
+      "name": "Target",
+      "image": "/assets/rewards/target.png"
+    },
+    {
+      "name": "Walmart",
+      "image": "/assets/rewards/walmart.png"
+    }
+  ]
 }

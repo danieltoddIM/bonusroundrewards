@@ -43,6 +43,9 @@ bonus-round/site/assets/css/site.css
 bonus-round/site/assets/fonts/OFL-Manrope.txt
 bonus-round/site/assets/fonts/manrope-latin.woff2
 bonus-round/site/assets/js/site.js
+bonus-round/site/assets/rewards/amazon.png
+bonus-round/site/assets/rewards/target.png
+bonus-round/site/assets/rewards/walmart.png
 bonus-round/site/cookies/index.html
 bonus-round/site/do-not-sell/index.html
 bonus-round/site/download/index.html
