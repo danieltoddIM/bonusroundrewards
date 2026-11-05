@@ -1,0 +1,26 @@
+
+Prelaunch content (8):
+  - account-deletion/index.html: 7 unresolved copy placeholder(s): [confirmed in-app deletion path], [Confirm the exact deleted categories, systems, processor instructions, and treatment of linked profiles.], [List the actual retained categories, purpose and legal basis, retention period or criterion, and backup de…], [confirmed acknowledgment timing], …
+  - do-not-sell/index.html: 2 unresolved copy placeholder(s): [Confirm whether the app sells or shares personal information as defined by applicable law, or uses targete…], [Confirm the operational response timing, how the choice reaches all applicable SDKs and partners, how it a…]
+  - faq/index.html: 3 unresolved copy placeholder(s): [confirmed redemption processing time], [confirmed minimum redemption and point requirement], [confirmed supported countries]
+  - how-it-works/index.html: 3 unresolved copy placeholder(s): [confirmed redemption processing time], [confirmed supported countries], [confirmed minimum redemption and point requirement]
+  - privacy-policy/index.html: 23 unresolved copy placeholder(s): [effective date], [Before publication, confirm each category below, the specific fields collected, its source, and whether it…], [Confirm required and optional fields, sign-in methods, and age-check method.], [Confirm the exact gameplay, purchase, and attribution events received from each source.], …
+  - rewards-rules/index.html: 14 unresolved copy placeholder(s): [effective date], [confirmed supported countries], [Confirm device and operating-system requirements; account, household, and device limits; and any additiona…], [confirmed timing and reporting window], …
+  - terms/index.html: 16 unresolved copy placeholder(s): [effective date], [Confirm the in-app acceptance flow, version records, and order of precedence among these terms, offer term…], [confirmed supported countries], [Confirm the permitted number of accounts per person, device and household; recovery options; verification …], …
+  - config/site.json: unresolved launch fields: appStoreUrl, googlePlayUrl, supportedCountries, redemptionTiming, inAppDeletionPath, deletionTimeline, minimumRedemption, effectiveDate
+
+FAILED: 14 issue(s), 2602 checks, 13 public/error pages, 3 archived pages.
+  - account-deletion/index.html: release copy still contains bracketed placeholders.
+  - do-not-sell/index.html: release copy still contains bracketed placeholders.
+  - faq/index.html: release copy still contains bracketed placeholders.
+  - how-it-works/index.html: release copy still contains bracketed placeholders.
+  - privacy-policy/index.html: release copy still contains bracketed placeholders.
+  - privacy-policy/index.html: attorney-review draft notice remains.
+  - rewards-rules/index.html: release copy still contains bracketed placeholders.
+  - terms/index.html: release copy still contains bracketed placeholders.
+  - terms/index.html: attorney-review draft notice remains.
+  - Launch confirmation is not complete: legalApproved.
+  - Launch confirmation is not complete: operationsVerified.
+  - Launch confirmation is not complete: publicAssetsApproved.
+  - Launch confirmation is not complete: contactInboxesVerified.
+  - Launch configuration still contains required placeholders.

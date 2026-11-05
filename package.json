@@ -1,1 +1,15 @@
-{"name":"bonus-round-rewards","version":"1.0.0","private":true,"scripts":{"dev":"python3 -m http.server 4173"}}
+{
+  "name": "bonus-round-public-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static Bonus Round consumer website and preserved partnership archive.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "check:launch": "node scripts/check.mjs --launch",
+    "serve": "node scripts/serve.mjs",
+    "dev": "node scripts/serve.mjs"
+  }
+}

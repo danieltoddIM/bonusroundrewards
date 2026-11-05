@@ -1,0 +1,38 @@
+{
+  "name": "Bonus Round",
+  "origin": "https://bonusroundrewards.com",
+  "legalEntity": "Bonus Round Rewards LLC",
+  "legalForm": "an Arizona limited liability company",
+  "operatorStatement": "operated and published by Bonus Round Rewards LLC",
+  "supportEmail": "support@bonusroundrewards.com",
+  "privacyEmail": "privacy@bonusroundrewards.com",
+  "copyrightYear": 2026,
+  "appStoreUrl": "",
+  "googlePlayUrl": "",
+  "giftCardBrands": [],
+  "supportedCountries": "[confirmed supported countries]",
+  "redemptionTiming": "[confirmed redemption processing time]",
+  "inAppDeletionPath": "[confirmed in-app deletion path]",
+  "deletionTimeline": "[confirmed deletion timeline]",
+  "minimumRedemption": "[confirmed minimum redemption and point requirement]",
+  "effectiveDate": "[effective date]",
+  "legalApproved": false,
+  "operationsVerified": false,
+  "publicAssetsApproved": false,
+  "contactInboxesVerified": false,
+  "businessEmail": "daniel@bonusroundrewards.com",
+  "giftCardExamples": [
+    {
+      "name": "Amazon",
+      "image": "/assets/rewards/amazon.png"
+    },
+    {
+      "name": "Target",
+      "image": "/assets/rewards/target.png"
+    },
+    {
+      "name": "Walmart",
+      "image": "/assets/rewards/walmart.png"
+    }
+  ]
+}
