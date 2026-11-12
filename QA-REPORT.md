@@ -28,3 +28,7 @@ Existing launch blockers remain: legal drafts, unconfirmed operational policies,
 ## Image disclaimer update
 
 Added the owner-requested wording below homepage screenshots, gift-card artwork and each How It Works screenshot. Additional text covers illustrative previews, changing offer amounts/requirements/availability, and checking current in-app eligibility, deadlines and redemption terms. Rebuilt successfully and passed all 2,592 structural checks. Image assets and partner archive were not changed.
+
+## Campaign placement correction — November 12, 2026
+
+Homepage main content verified unchanged. Added only a small bottom footer link to `/qr-test`. The grid has noindex metadata/header and is absent from the sitemap. Five landing routes and all verified QR exports are integrated separately. Build and 2,959 static checks passed. No deployment performed.

@@ -99,6 +99,7 @@ for (const file of htmlFiles) {
   const els = elements(html);
   const partner = label.startsWith('partners/');
   const publicPage = !partner;
+  const campaign = ['scrabble-tv.html','trivia-tv.html','scrabble-social.html','trivia-social.html','play.html','qr-test.html'].includes(label);
   if (publicPage) assert(!/\{\{(?:[a-z][\w:-]*)\}\}/i.test(html), `${label}: unresolved build-template token.`);
   const ids = els.flatMap(el => el.a.id ? [el.a.id] : []);
   assert(ids.length === new Set(ids).size, `${label}: duplicate id attribute.`);
@@ -143,6 +144,12 @@ for (const file of htmlFiles) {
     }
   }
 
+  if (campaign) {
+    assert(/<h1>/.test(html), `${label}: campaign heading missing.`);
+    assert(label === 'qr-test.html' || html.includes('const ONELINK_URL = "";'), `${label}: OneLink placeholder missing.`);
+    assert(label !== 'qr-test.html' || /noindex,nofollow/.test(html), 'QR test grid must remain noindex.');
+    continue;
+  }
   const robots = els.filter(el => el.tag === 'meta' && ['robots', 'googlebot'].includes((el.a.name || '').toLowerCase())).map(el => el.a.content || '').join(',');
   if (partner) {
     assert(/\bnoindex\b/i.test(robots), `${label}: archived proposal must contain a noindex meta tag.`);
@@ -238,7 +245,7 @@ if (fs.existsSync(vercelPath)) {
     for (const slug of ['economics-model', 'install-model']) assert((vercel.redirects || []).some(rule => rule.source === '/' + slug && rule.destination === '/partners/' + slug && rule.permanent), `Missing permanent Vercel redirect for /${slug}.`);
     for (const rule of vercel.headers || []) {
       if ((rule.headers || []).some(header => header.key.toLowerCase() === 'x-robots-tag' && /noindex/i.test(header.value))) {
-        assert(rule.source.startsWith('/partners'), `Vercel noindex header affects a public path: ${rule.source}`);
+        assert((rule.source.startsWith('/partners') || rule.source === '/qr-test'), `Vercel noindex header affects a public path: ${rule.source}`);
       }
     }
   } catch (error) { assert(false, `Invalid vercel.json: ${error.message}`); }

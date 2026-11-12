@@ -133,3 +133,7 @@ Always run the local build and commit the generated `site/` files **and `vercel.
 The original static proposal, CSS, assets, and interactive model scripts were retained. Same-site navigation was rebased to `/partners`. `partner-migration-report.json` records the original source URLs, file hashes, and preservation checks.
 
 Keep these pages out of public navigation and the sitemap. Their `noindex,nofollow` directives require crawler access; do not block the archive in `robots.txt`. Unlisted and `noindex` pages are still publicly accessible to anyone with their URLs. The generated Content Security Policy explicitly permits the preserved scripts by hash. Test both model sliders and the transfer of install assumptions into the economics model after deployment.
+
+## Campaign pages
+
+The regular homepage is preserved. The QR scan grid is `/qr-test`, excluded from the sitemap and marked noindex, with a small “Campaign QR test” link at the bottom of the shared footer. The five promo destinations are separate HTML files in `site/`. See `CAMPAIGN-README.txt`. The grid is unlisted from main navigation; noindex is not access control.
