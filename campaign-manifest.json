@@ -1,0 +1,67 @@
+[
+  {
+    "path": "/scrabble-tv",
+    "url": "https://bonusroundrewards.com/scrabble-tv",
+    "tracking_id": "linear_scrabble",
+    "badge": "CHANNEL: LINEAR | SHOW: SCRABBLE",
+    "png": "qrcodes/qr_linear_scrabble.png",
+    "svg": "qrcodes/qr_linear_scrabble.svg",
+    "png_pixels": 2025,
+    "qr_version": 5,
+    "matrix_modules_including_quiet_zone": 45,
+    "quiet_zone_modules": 4,
+    "error_correction": "H"
+  },
+  {
+    "path": "/trivia-tv",
+    "url": "https://bonusroundrewards.com/trivia-tv",
+    "tracking_id": "linear_trivialpursuit",
+    "badge": "CHANNEL: LINEAR | SHOW: TRIVIAL PURSUIT",
+    "png": "qrcodes/qr_linear_trivialpursuit.png",
+    "svg": "qrcodes/qr_linear_trivialpursuit.svg",
+    "png_pixels": 2025,
+    "qr_version": 5,
+    "matrix_modules_including_quiet_zone": 45,
+    "quiet_zone_modules": 4,
+    "error_correction": "H"
+  },
+  {
+    "path": "/scrabble-social",
+    "url": "https://bonusroundrewards.com/scrabble-social",
+    "tracking_id": "social_scrabble",
+    "badge": "CHANNEL: SOCIAL | SHOW: SCRABBLE",
+    "png": "qrcodes/qr_social_scrabble.png",
+    "svg": "qrcodes/qr_social_scrabble.svg",
+    "png_pixels": 2009,
+    "qr_version": 6,
+    "matrix_modules_including_quiet_zone": 49,
+    "quiet_zone_modules": 4,
+    "error_correction": "H"
+  },
+  {
+    "path": "/trivia-social",
+    "url": "https://bonusroundrewards.com/trivia-social",
+    "tracking_id": "social_trivialpursuit",
+    "badge": "CHANNEL: SOCIAL | SHOW: TRIVIAL PURSUIT",
+    "png": "qrcodes/qr_social_trivialpursuit.png",
+    "svg": "qrcodes/qr_social_trivialpursuit.svg",
+    "png_pixels": 2025,
+    "qr_version": 5,
+    "matrix_modules_including_quiet_zone": 45,
+    "quiet_zone_modules": 4,
+    "error_correction": "H"
+  },
+  {
+    "path": "/play",
+    "url": "https://bonusroundrewards.com/play",
+    "tracking_id": "digital_joint",
+    "badge": "CHANNEL: DIGITAL | SHOWS: SCRABBLE + TRIVIAL PURSUIT (JOINT)",
+    "png": "qrcodes/qr_digital_joint.png",
+    "svg": "qrcodes/qr_digital_joint.svg",
+    "png_pixels": 2009,
+    "qr_version": 4,
+    "matrix_modules_including_quiet_zone": 41,
+    "quiet_zone_modules": 4,
+    "error_correction": "H"
+  }
+]

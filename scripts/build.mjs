@@ -164,6 +164,11 @@ const vercel = {
     {source:'/assets/:path*',headers:[{key:'Cache-Control',value:'public, max-age=3600, must-revalidate'}]}
   ]
 };
+// Self-contained campaign pages are published under site/, never over index.html.
+const campaignCsp = csp.replace(/script-src [^;]+;/, "script-src 'self' 'unsafe-inline';").replace("font-src 'self'", "font-src 'self' data:");
+for (const route of ['/scrabble-tv','/trivia-tv','/scrabble-social','/trivia-social','/play','/qr-test']) {
+  vercel.headers.push({source:route,headers:[{key:'Content-Security-Policy',value:campaignCsp},...(route==='/qr-test'?[{key:'X-Robots-Tag',value:'noindex, nofollow'}]:[])]});
+}
 await writeFile(path.join(root,'vercel.json'),JSON.stringify(vercel,null,2)+'\n');
 console.log(`Built ${pages.length} public pages. Preserved /partners and static assets. Vercel configuration and SEO files updated.`);
 if(!config.legalApproved || !config.operationsVerified) console.log('Prelaunch content remains. Run npm run check:launch for release blockers.');
