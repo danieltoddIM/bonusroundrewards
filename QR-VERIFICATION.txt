@@ -1,7 +1,0 @@
-Locally verified with ZXing-C++. Each exported PNG and rasterized SVG was decoded, compared to its exact intended URL, and matched. The two exports also match pixel-for-pixel when rasterized at native resolution. Each PNG also decoded at 280 x 280. These are file decode checks, not a guarantee of scans from final compressed video or verification of deployed landing-page availability.
-
-linear_scrabble: https://bonusroundrewards.com/scrabble-tv | 2025x2025 | ECC H | PNG + SVG PASS
-linear_trivialpursuit: https://bonusroundrewards.com/trivia-tv | 2025x2025 | ECC H | PNG + SVG PASS
-social_scrabble: https://bonusroundrewards.com/scrabble-social | 2009x2009 | ECC H | PNG + SVG PASS
-social_trivialpursuit: https://bonusroundrewards.com/trivia-social | 2025x2025 | ECC H | PNG + SVG PASS
-digital_joint: https://bonusroundrewards.com/play | 2009x2009 | ECC H | PNG + SVG PASS
