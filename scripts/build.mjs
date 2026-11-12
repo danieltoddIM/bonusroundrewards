@@ -164,7 +164,7 @@ const vercel = {
     {source:'/assets/:path*',headers:[{key:'Cache-Control',value:'public, max-age=3600, must-revalidate'}]}
   ]
 };
-// Campaign pages are separate from the consumer homepage and sitemap.
+// Self-contained campaign pages are published under site/, never over index.html.
 const campaignCsp = csp.replace(/script-src [^;]+;/, "script-src 'self' 'unsafe-inline';").replace("font-src 'self'", "font-src 'self' data:");
 for (const route of ['/scrabble-tv','/trivia-tv','/scrabble-social','/trivia-social','/play','/qr-test']) {
   vercel.headers.push({source:route,headers:[{key:'Content-Security-Policy',value:campaignCsp},...(route==='/qr-test'?[{key:'X-Robots-Tag',value:'noindex, nofollow'}]:[])]});
