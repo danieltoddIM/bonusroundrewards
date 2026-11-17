@@ -146,7 +146,7 @@ for (const file of htmlFiles) {
 
   if (campaign) {
     assert(/<h1>/.test(html), `${label}: campaign heading missing.`);
-    assert(label === 'qr-test.html' || html.includes('const ONELINK_URL = "";'), `${label}: OneLink placeholder missing.`);
+    assert(label === 'qr-test.html' || /const ONELINK_URL = "(?:https:\/\/[^"]*)?";/.test(html), `${label}: OneLink placeholder missing.`);
     assert(label !== 'qr-test.html' || /noindex,nofollow/.test(html), 'QR test grid must remain noindex.');
     continue;
   }
