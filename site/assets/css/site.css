@@ -315,3 +315,7 @@ address{font-style:normal}
 @media(max-width:350px){.hero-phone-front{width:157px;left:14px}.hero-phone-back{width:143px;right:4px}}
 
 .how-step .screenshot-disclaimer{font-size:12px;line-height:1.6;color:var(--muted);max-width:300px;margin:16px auto 0}
+
+/* Long final legal documents must fit narrow screens without changing their text. */
+.legal-layout>.prose{min-width:0;overflow-wrap:anywhere}
+@media(min-width:851px){.legal-layout>.legal-toc{max-height:calc(100vh - 50px);overflow-y:auto}}

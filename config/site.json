@@ -34,5 +34,11 @@
       "name": "Walmart",
       "image": "/assets/rewards/walmart.png"
     }
-  ]
+  ],
+  "minimumAge": 16,
+  "policyPublicationDate": "November 17, 2026",
+  "finalPolicyDocuments": {
+    "terms": true,
+    "privacyPolicy": true
+  }
 }
